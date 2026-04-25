@@ -15,14 +15,8 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Connect to database
-const db = mysql.createConnection({
-    host: process.env.DB_HOST,
-    user: process.env.DB_USER,
-    password: process.env.DB_PASSWORD,
-    database: process.env.DB_NAME,
-    port: process.env.DB_PORT
-});
+// Connect to Railway MySQL database using the public database URL.
+const db = mysql.createConnection(process.env.DB_URL);
 
 // Confirm DB connection
 db.connect(err => {
