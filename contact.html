@@ -1,0 +1,159 @@
+<!-- 
+    HH Yarn Creations
+    Author: Hunter Hastings
+    Web Development Final Project
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HH Yarn Creations</title>
+
+    <link rel="icon" type="image/jpeg" href="images/HH.jpeg">
+
+    <meta name="title" content="HH Yarn Creations">
+    <meta name="description" content="Discover handmade yarn products including bags, beanies, headbands, and more. Crafted with care and creativity.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Delius&family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/61a37b1ee2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- ==============================
+     Header / Main Navigation
+     Includes logo, page links, cart icon, and mobile menu button
+============================== -->
+    <header id="header">
+        <a href="index.html">
+            <img id="logo" src="images/HH.jpeg" class="logo" alt="HH Yarn Creations logo">
+        </a>
+
+        <nav aria-label="Main navigation">
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a class="active" href="contact.html" aria-current="page">Contact</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html" class="cart-icon" aria-label="View cart">
+                        <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+                <li>
+                    <button id="close" type="button" aria-label="Close menu">
+                        <i class="fa-solid fa-x" aria-hidden="true"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="mobile">
+            <a href="cart.html" class="mobile-cart-icon" aria-label="View cart">
+                <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                <span id="mobile-cart-count">0</span>
+            </a>
+            <button id="bar" type="button" aria-label="Open menu">
+                <i class="fas fa-outdent" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+<!-- ==============================
+     Main Page Content
+============================== -->
+    <main>
+        <section id="page-header" aria-labelledby="contact-page-heading">
+            <h1 id="contact-page-heading">Contact Us</h1>
+            <p>Questions and/or Feedback? We want to hear from you!</p>
+        </section>
+<!-- Contact Section: React displays the contact form and owner information -->
+        <section id="form-details" aria-labelledby="contact-form-section-heading">
+            <h2 id="contact-form-section-heading" class="visually-hidden">Contact form and business information</h2>
+
+            <div id="react-contact-form"></div>
+
+            <aside class="people" aria-label="Business owner information">
+                <div>
+                    <img src="images/People.jpg" alt="Hunter Hastings, owner of HH Yarn Creations" loading="lazy">
+                    <p>
+                        <span>Hunter Hastings</span>
+                        Owner <br>
+                        Email: hh.yarncreations@gmail.com <br>
+                        "I want to ensure you have the best experience with our business. Please reach out if you have any questions, concerns, or product ideas."
+                    </p>
+                </div>
+            </aside>
+        </section>
+    </main>
+<!-- ==============================
+     Footer
+     Includes contact info, account links, and social media links
+============================== -->
+    <footer class="section-p1" id="footer">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Phone:</strong> (505) 499-7396</p>
+            <p><strong>Email:</strong> hh.yarncreations@gmail.com</p>
+            <p>
+                <strong>Etsy Shop:</strong>
+                <a href="https://hhyarncreations.etsy.com" target="_blank" rel="noopener noreferrer">
+                    Visit our Etsy shop
+                </a>
+            </p>
+        </div>
+
+        <div class="col" id="about">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="cart.html">View Cart</a>
+        </div>
+
+        <div class="followcol">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <a
+                    href="https://www.facebook.com/profile.php?id=61565590715747"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Facebook page"
+                >
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <a
+                    href="https://www.instagram.com/hh.yarncreations?igsh=MW85ZHlzbXo2OHh1Yg=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Instagram page"
+                >
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2026 HH Yarn Creations. All rights reserved.</p>
+        </div>
+    </footer>
+<!-- JavaScript File -->
+    <script src="script.js"></script>
+<!-- React and Babel Scripts -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel" src="contact-react.js"></script>
+</body>
+</html>

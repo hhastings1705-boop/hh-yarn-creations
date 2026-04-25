@@ -1,0 +1,269 @@
+<!-- 
+    HH Yarn Creations
+    Author: Hunter Hastings
+    Web Development Final Project
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>HH Yarn Creations</title>
+
+    <link rel="icon" type="image/jpeg" href="images/HH.jpeg">
+
+    <meta name="title" content="HH Yarn Creations">
+    <meta name="description" content="Discover handmade yarn products including bags, beanies, headbands, and more. Crafted with care and creativity.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Chewy&family=Delius&family=Fuzzy+Bubbles:wght@400;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+<!-- JavaScript File -->
+    <script src="https://kit.fontawesome.com/61a37b1ee2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- ==============================
+     Header / Main Navigation
+     Includes logo, page links, cart icon, and mobile menu button
+============================== -->
+    <header id="header">
+        <a href="index.html">
+            <img id="logo" src="images/HH.jpeg" class="logo" alt="HH Yarn Creations logo">
+        </a>
+
+        <nav aria-label="Main navigation">
+            <ul id="navbar">
+                <li class="close-item">
+                    <button id="close" type="button" aria-label="Close menu">
+                        <i class="fa-solid fa-x" aria-hidden="true"></i>
+                    </button>
+                </li>
+                <li><a class="active" href="index.html" aria-current="page">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html" class="cart-icon" aria-label="View cart">
+                        <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="mobile">
+            <a href="cart.html" class="mobile-cart-icon" aria-label="View cart">
+                <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                <span id="mobile-cart-count">0</span>
+            </a>
+            <button id="bar" type="button" aria-label="Open menu">
+                <i class="fas fa-outdent" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+<!-- ==============================
+     Main Page Content
+============================== -->
+    <main>
+<!-- Hero Section: introduces the brand and directs users to shop -->
+        <section id="hero" aria-label="Welcome">
+            <div class="text-box" id="text-box">
+                <h1>Created For You!</h1>
+                <p>Discover our handmade yarn products, crafted with love and care.</p>
+            </div>
+            <button id="shop-now-btn" type="button">Shop Now</button>
+        </section>
+<!-- Featured Products Section: highlights best-selling handmade items -->
+        <section id="featured-products" class="section-p1" aria-labelledby="featured-products-heading">
+            <h2 id="featured-products-heading">Featured Products</h2>
+            <p>Best Selling</p>
+
+            <div class="pro-container">
+                <article class="pro" data-id="1" tabindex="0" role="button" aria-label="View details for Medium Size Crochet Sunflower Bag">
+                    <img src="images/Medium Size Crochet Sunflower Bag/feature.jpg" alt="Medium Size Crochet Sunflower Bag" loading="lazy">
+                    <div class="des">
+                        <span>Bag</span>
+                        <h3>Medium Size Crochet Sunflower Bag</h3>
+                        <div class="star" aria-hidden="true">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>$20</p>
+                    </div>
+                    <button type="button" class="cart-button" aria-label="Add Medium Size Crochet Sunflower Bag to cart">
+                        <i class="fa-solid fa-cart-shopping cart" aria-hidden="true"></i>
+                    </button>
+                </article>
+
+                <article class="pro" data-id="2" tabindex="0" role="button" aria-label="View details for Cinnamon Cedar Twisted Headband">
+                    <img src="images/Cinnamon Cedar Twisted Headband/feature2.jpg" alt="Cinnamon Cedar Twisted Headband" loading="lazy">
+                    <div class="des">
+                        <span>Headband</span>
+                        <h3>Cinnamon Cedar Twisted Headband</h3>
+                        <div class="star" aria-hidden="true">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>$12</p>
+                    </div>
+                    <button type="button" class="cart-button" aria-label="Add Cinnamon Cedar Twisted Headband to cart">
+                        <i class="fa-solid fa-cart-shopping cart" aria-hidden="true"></i>
+                    </button>
+                </article>
+
+                <article class="pro" data-id="4" tabindex="0" role="button" aria-label="View details for Cinnamon Cedar Market Bag">
+                    <img src="images/Cinnamon Cedar Market Bag/feature4.jpg" alt="Cinnamon Cedar Market Bag" loading="lazy">
+                    <div class="des">
+                        <span>Bag</span>
+                        <h3>Cinnamon Cedar Market Bag</h3>
+                        <div class="star" aria-hidden="true">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p>$25</p>
+                    </div>
+                    <button type="button" class="cart-button" aria-label="Add Cinnamon Cedar Market Bag to cart">
+                        <i class="fa-solid fa-cart-shopping cart" aria-hidden="true"></i>
+                    </button>
+                </article>
+            </div>
+        </section>
+<!-- Customer Reviews Section: displays customer feedback in a table -->
+        <section id="reviews" class="section-p1" aria-labelledby="reviews-heading">
+            <div class="table">
+                <h2 id="reviews-heading">Customer Reviews</h2>
+                <p>What our customers are saying!</p>
+
+                <div class="table-scroll">
+                    <table class="review-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Customer</th>
+                                <th scope="col">Review</th>
+                                <th scope="col">Rating</th>
+                                <th scope="col">Date</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Selena</td>
+                                <td>"The bag is super cute! I use it when I go shopping, and it holds many items. The shipping was super quick."</td>
+                                <td>
+                                    <div class="star" aria-label="5 out of 5 stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </td>
+                                <td>Dec 13, 2024</td>
+                            </tr>
+                            <tr>
+                                <td>Johanna</td>
+                                <td>"I love the color palette and how soft it is. Wider than expected, but I am glad because it covers my ears properly when I go for a run."</td>
+                                <td>
+                                    <div class="star" aria-label="5 out of 5 stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </td>
+                                <td>Nov 14, 2024</td>
+                            </tr>
+                            <tr>
+                                <td>Alice</td>
+                                <td>"This is an adorable bag. Just the right size to carry phone, keys, tissue, and lipstick. Love it."</td>
+                                <td>
+                                    <div class="star" aria-label="5 out of 5 stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                </td>
+                                <td>Sep 28, 2024</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- ==============================
+     Footer
+     Includes contact info, account links, and social media links
+============================== -->
+    <footer class="section-p1" id="footer">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Phone:</strong> (505) 499-7396</p>
+            <p><strong>Email:</strong> hh.yarncreations@gmail.com</p>
+            <p>
+                <strong>Etsy Shop:</strong>
+                <a href="https://hhyarncreations.etsy.com" target="_blank" rel="noopener noreferrer">
+                    Visit our Etsy shop
+                </a>
+            </p>
+        </div>
+
+        <div class="col" id="about">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="cart.html">View Cart</a>
+        </div>
+
+        <div class="followcol">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <a
+                    href="https://www.facebook.com/profile.php?id=61565590715747"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Facebook page"
+                >
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <a
+                    href="https://www.instagram.com/hh.yarncreations?igsh=MW85ZHlzbXo2OHh1Yg=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Instagram page"
+                >
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2026 HH Yarn Creations. All rights reserved.</p>
+        </div>
+    </footer>
+<!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

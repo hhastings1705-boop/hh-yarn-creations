@@ -1,0 +1,187 @@
+<!-- 
+    HH Yarn Creations
+    Author: Hunter Hastings
+    Web Development Final Project
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Details - HH Yarn Creations</title>
+
+    <link rel="icon" type="image/jpeg" href="images/HH.jpeg">
+    <link rel="stylesheet" href="styles.css">
+<!-- JavaScript File -->
+    <script src="https://kit.fontawesome.com/61a37b1ee2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- ==============================
+     Header / Main Navigation
+     Includes logo, page links, cart icon, and mobile menu button
+============================== -->
+    <header id="header">
+        <a href="index.html">
+            <img id="logo" src="images/HH.jpeg" class="logo" alt="HH Yarn Creations logo">
+        </a>
+
+        <nav aria-label="Main navigation">
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a class="active" href="shop.html" aria-current="page">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html" class="cart-icon" aria-label="View cart">
+                        <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+                <li>
+                    <button id="close" type="button" aria-label="Close menu">
+                        <i class="fa-solid fa-x" aria-hidden="true"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="mobile">
+            <a href="cart.html" class="mobile-cart-icon" aria-label="View cart">
+                <i class="fa-solid fa-bag-shopping" aria-hidden="true"></i>
+                <span id="mobile-cart-count">0</span>
+            </a>
+            <button id="bar" type="button" aria-label="Open menu">
+                <i class="fas fa-outdent" aria-hidden="true"></i>
+            </button>
+        </div>
+    </header>
+<!-- ==============================
+     Main Page Content
+============================== -->
+    <main>
+<!-- Product Details Section: displays selected product image, price, stock, and cart buttons -->
+        <section id="product-details" class="section-p1" aria-labelledby="detail-name">
+            <div class="single-pro-image">
+                <img
+                    id="detail-image"
+                    src="images/Medium Size Crochet Sunflower Bag/feature.jpg"
+                    alt="Product image"
+                    width="100%"
+                >
+
+                <div class="small-img-group" aria-label="Product thumbnails">
+                    <div class="small-img-col">
+                        <img alt="Product thumbnail 1" class="small-img" hidden>
+                    </div>
+                    <div class="small-img-col">
+                        <img alt="Product thumbnail 2" class="small-img" hidden>
+                    </div>
+                    <div class="small-img-col">
+                        <img alt="Product thumbnail 3" class="small-img" hidden>
+                    </div>
+                    <div class="small-img-col">
+                        <img alt="Product thumbnail 4" class="small-img" hidden>
+                    </div>
+                    <div class="small-img-col">
+                        <img alt="Product thumbnail 5" class="small-img" hidden>
+                    </div>
+                </div>
+            </div>
+
+            <article class="single-pro-details">
+                <h1 id="detail-name"></h1>
+
+                <div class="price-stars-row">
+                    <p id="detail-price"></p>
+
+                    <div class="product-stars" aria-label="5 out of 5 stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <span id="review-count">(1)</span>
+                    </div>
+                </div>
+
+                <p id="detail-stock" class="stock-message"></p>
+
+                <div class="product-description">
+                    <p id="detail-description"></p>
+                </div>
+
+                <div class="quantity-section">
+                    <label for="quantity">Quantity</label>
+                    <input type="number" id="quantity" value="1" min="1">
+                </div>
+
+                <div class="detail-buttons">
+                    <button id="detail-cart-btn" type="button">Add to Cart</button>
+                    <button id="buy-now-btn" type="button">Buy Now</button>
+                </div>
+            </article>
+        </section>
+    </main>
+<!-- ==============================
+     Footer
+     Includes contact info, account links, and social media links
+============================== -->
+    <footer class="section-p1" id="footer">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Phone:</strong> (505) 499-7396</p>
+            <p><strong>Email:</strong> hh.yarncreations@gmail.com</p>
+            <p>
+                <strong>Etsy Shop:</strong>
+                <a href="https://hhyarncreations.etsy.com" target="_blank" rel="noopener noreferrer">
+                    Visit our Etsy shop
+                </a>
+            </p>
+        </div>
+
+        <div class="col" id="about">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="cart.html">View Cart</a>
+        </div>
+
+        <div class="followcol">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <a
+                    href="https://www.facebook.com/profile.php?id=61565590715747"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Facebook page"
+                >
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <a
+                    href="https://www.instagram.com/hh.yarncreations?igsh=MW85ZHlzbXo2OHh1Yg=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Instagram page"
+                >
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2026 HH Yarn Creations. All rights reserved.</p>
+        </div>
+    </footer>
+<!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!-- HH Yarn Creations
+    Page: FAQ
+    Purpose: Displays common customer questions with an interactive accordion. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FAQ | HH Yarn Creations</title>
+    <link rel="icon" type="image/jpeg" href="images/HH.jpeg">
+    <link rel="stylesheet" href="styles.css">
+    <!-- JavaScript File -->
+    <script src="https://kit.fontawesome.com/61a37b1ee2.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+<!-- ==============================
+     Header / Main Navigation
+     Includes logo, page links, cart icon, and mobile menu button
+============================== -->
+   <header id="header">
+        <a href="index.html">
+            <img id="logo" src="images/HH.jpeg" class="logo" alt="HH Yarn Creations logo">
+        </a>
+
+        <nav aria-label="Main navigation">
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li id="lg-bag">
+                    <a href="cart.html" class="cart-icon" aria-label="View cart">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        <span id="cart-count">0</span>
+                    </a>
+                </li>
+                <li>
+                    <button id="close" type="button" aria-label="Close menu">
+                        <i class="fa-solid fa-x"></i>
+                    </button>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="mobile">
+            <a href="cart.html" class="mobile-cart-icon" aria-label="View cart">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="mobile-cart-count">0</span>
+            </a>
+            <button id="bar" type="button" aria-label="Open menu">
+                <i class="fas fa-outdent"></i>
+            </button>
+        </div>
+    </header>
+<!-- ==============================
+     Main Page Content
+============================== -->
+    <main>
+        <section id="page-header">
+            <h1>FAQ</h1>
+            <p>Common questions about HH Yarn Creations.</p>
+        </section>
+<!-- FAQ Section: accordion list of common customer questions -->
+        <section class="section-p1 faq-section">
+            <div class="faq-item">
+                <button class="faq-question" type="button">
+                    How long does shipping take?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Orders are typically processed within 2–3 business days. Shipping time depends on your location.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">
+                    Are your products handmade?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Yes! Each item is handmade with care using yarn and materials selected for comfort and quality.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">
+                    Do you accept custom orders?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Custom requests may be available depending on the item, yarn colors, and current order volume. Please contact us with your idea.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">
+                    How do I care for my crochet item?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Care instructions vary by item, but most products should be washed gently and dried flat to help keep their shape.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question" type="button">
+                    Do you accept returns?
+                    <span>+</span>
+                </button>
+                <div class="faq-answer">
+                    <p>Please contact us if there is an issue with your order. We want you to have a positive experience.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+<!-- ==============================
+     Footer
+     Includes contact info, account links, and social media links
+============================== -->
+    <footer class="section-p1" id="footer">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>Phone:</strong> (505) 499-7396</p>
+            <p><strong>Email:</strong> hh.yarncreations@gmail.com</p>
+            <p>
+                <strong>Etsy Shop:</strong>
+                <a href="https://hhyarncreations.etsy.com" target="_blank" rel="noopener noreferrer">
+                    Visit our Etsy shop
+                </a>
+            </p>
+        </div>
+
+        <div class="col" id="about">
+            <h4>About</h4>
+            <a href="about.html">About Us</a>
+            <a href="contact.html">Contact Us</a>
+            <a href="faq.html">FAQ</a>
+        </div>
+
+        <div class="col">
+            <h4>My Account</h4>
+            <a href="cart.html">View Cart</a>
+        </div>
+
+        <div class="followcol">
+            <h4>Follow Us</h4>
+            <div class="icon">
+                <a
+                    href="https://www.facebook.com/profile.php?id=61565590715747"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Facebook page"
+                >
+                    <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                </a>
+                <a
+                    href="https://www.instagram.com/hh.yarncreations?igsh=MW85ZHlzbXo2OHh1Yg=="
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Visit our Instagram page"
+                >
+                    <i class="fab fa-instagram" aria-hidden="true"></i>
+                </a>
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>© 2026 HH Yarn Creations. All rights reserved.</p>
+        </div>
+    </footer>
+<!-- JavaScript Files -->
+    <script src="faq.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
