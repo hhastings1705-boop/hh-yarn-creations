@@ -9,7 +9,7 @@
 const { useEffect, useMemo, useState } = React;
 
 // Base API URL (easy to update later)
-const API_BASE_URL = "http://localhost:3000";
+const API_BASE_URL = "https://hh-yarn-api.onrender.com";
 
 // Get products from backend
 async function fetchProducts() {
