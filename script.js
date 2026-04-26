@@ -400,13 +400,18 @@ async function loadProductDetails() {
         detailImage.alt = product.name;
         detailName.textContent = product.name;
         detailPrice.textContent = `$${product.price}`;
-        detailDescription.innerHTML = product.description
-            .replace(/\n/g, "<br>")
-            .replace(/(Dimensions:|Care Instructions:)/g, "<br><strong>$1</strong>");
+
+        // ✅ SAFE FORMATTING FIX
+        const descriptionText = String(product.description || "");
+
+        detailDescription.innerHTML = descriptionText
+            .replace(/\r?\n/g, "<br>")
+            .replace(/(Dimensions:?|Care Instructions:?|Features:?)/g, "<br><strong>$1</strong>");
 
         renderStockStatus(product);
         renderProductThumbnails(product);
         setupProductButtons();
+
     } catch (error) {
         console.error("Error loading product details:", error);
         detailName.textContent = "Product not found";
