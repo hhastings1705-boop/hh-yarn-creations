@@ -367,6 +367,48 @@ function renderStockStatus(product) {
     }
 }
 
+function formatDescription(description) {
+    const text = String(description || "");
+
+    const featureSplit = text.split(/Features\s*-?/i);
+    const mainText = featureSplit[0] || "";
+    const restAfterFeatures = featureSplit[1] || "";
+
+    const careSplit = restAfterFeatures.split(/Care Instructions\s*-?/i);
+    const featuresText = careSplit[0] || "";
+    const careText = careSplit[1] || "";
+
+    let formatted = `<p>${mainText.trim().replace(/\.\s+/g, ".</p><p>")}</p>`;
+
+    if (featuresText.trim()) {
+        const features = featuresText
+            .split(/\s-\s/)
+            .map(item => item.trim())
+            .filter(Boolean);
+
+        formatted += `<h4>Features:</h4><ul>`;
+        features.forEach(item => {
+            formatted += `<li>${item}</li>`;
+        });
+        formatted += `</ul>`;
+    }
+
+    if (careText.trim()) {
+        const care = careText
+            .split(/\s-\s/)
+            .map(item => item.trim())
+            .filter(Boolean);
+
+        formatted += `<h4>Care Instructions:</h4><ul>`;
+        care.forEach(item => {
+            formatted += `<li>${item}</li>`;
+        });
+        formatted += `</ul>`;
+    }
+
+    return formatted;
+}
+
 async function loadProductDetails() {
     const detailName = document.getElementById("detail-name");
     const detailImage = document.getElementById("detail-image");
@@ -403,9 +445,7 @@ async function loadProductDetails() {
 
         const descriptionText = String(product.description || "");
 
-        detailDescription.innerHTML = descriptionText
-            .replace(/\r?\n/g, "<br>")
-            .replace(/(Dimensions:?|Care Instructions:?|Features:?)/g, "<br><strong>$1</strong>");
+       detailDescription.innerHTML = formatDescription(product.description);
 
         renderStockStatus(product);
         renderProductThumbnails(product);
