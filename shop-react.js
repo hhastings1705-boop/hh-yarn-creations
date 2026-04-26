@@ -9,7 +9,7 @@
 
 const { useEffect, useMemo, useState } = React;
 
-const API_BASE_URL = "https://hh-yarn-api.onrender.com";
+const SHOP_API_BASE_URL = "https://hh-yarn-api.onrender.com";
 
 // ------------------------------
 // Cart Helpers
@@ -189,7 +189,7 @@ function ShopApp() {
     useEffect(() => {
         async function loadProducts() {
             try {
-                const response = await fetch(`${API_BASE_URL}/products`);
+                const response = await fetch(`${SHOP_API_BASE_URL}/products`);
                 const data = await response.json();
                 setProducts(data);
             } catch (error) {
