@@ -753,6 +753,28 @@ footer .copyright {
     font-size: 15px;
 }
 
+#detail-description p {
+    margin-bottom: 12px;
+}
+
+#detail-description ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+#detail-description h4 {
+    margin-top: 15px;
+}
+
+#detail-description ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+}
+
+#detail-description h4 {
+    margin-top: 15px;
+}
+
 .single-pro-image {
     flex: 1 1 45%;
     max-width: 480px;
