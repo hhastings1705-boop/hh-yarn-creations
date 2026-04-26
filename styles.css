@@ -749,6 +749,8 @@ footer .copyright {
 
 #detail-description {
     white-space: pre-line;
+    line-height: 1.7;
+    font-size: 15px;
 }
 
 .single-pro-image {
