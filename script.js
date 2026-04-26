@@ -401,7 +401,6 @@ async function loadProductDetails() {
         detailName.textContent = product.name;
         detailPrice.textContent = `$${product.price}`;
 
-        // ✅ SAFE FORMATTING FIX
         const descriptionText = String(product.description || "");
 
         detailDescription.innerHTML = descriptionText
