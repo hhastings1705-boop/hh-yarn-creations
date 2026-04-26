@@ -747,6 +747,10 @@ footer .copyright {
     padding: 50px 20px;
 }
 
+#detail-description {
+    white-space: pre-line;
+}
+
 .single-pro-image {
     flex: 1 1 45%;
     max-width: 480px;
